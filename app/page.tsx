@@ -1055,7 +1055,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                                       {fileInfo.name}
                                       {fileInfo.edited && (
                                         <span className={`text-[10px] px-1 rounded ${
-                                          isSelected ? 'bg-blue-400' : 'bg-orange-500 text-white'
+                                          isSelected ? 'bg-blue-400' : 'bg-indigo-500 text-white'
                                         }`}>✓</span>
                                       )}
                                     </span>
@@ -1172,7 +1172,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     <div className="bg-black border border-gray-200 rounded-lg overflow-hidden">
                       <div className="px-4 py-2 bg-gray-100 text-gray-900 flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="w-3 h-3 border-2 border-orange-500 border-t-transparent rounded-full animate-spin" />
+                          <div className="w-3 h-3 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
                           <span className="font-mono text-sm">Streaming code...</span>
                         </div>
                       </div>
@@ -1190,7 +1190,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                         >
                           {generationProgress.streamedCode || 'Starting code generation...'}
                         </SyntaxHighlighter>
-                        <span className="inline-block w-2 h-4 bg-orange-400 ml-1 animate-pulse" />
+                        <span className="inline-block w-2 h-4 bg-fuchsia-400 ml-1 animate-pulse" />
                       </div>
                     </div>
                   )
@@ -1326,7 +1326,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
               <div className="mx-6 mb-6">
                 <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <div 
-                    className="h-full bg-gradient-to-r from-orange-500 to-orange-400 transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 transition-all duration-300"
                     style={{
                       width: `${(generationProgress.currentComponent / Math.max(generationProgress.components.length, 1)) * 100}%`
                     }}
@@ -1368,7 +1368,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
           <div className="relative w-full h-full bg-gray-50 flex items-center justify-center">
             <div className="text-center">
               <div className="mb-8">
-                <div className="w-16 h-16 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin mx-auto"></div>
+                <div className="w-16 h-16 border-4 border-indigo-200 border-t-fuchsia-500 rounded-full animate-spin mx-auto"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {loadingStage === 'gathering' && 'Gathering website information...'}
@@ -2730,22 +2730,22 @@ Focus on the key sections and content, making it clean and modern.`;
         <div className={`fixed inset-0 z-50 transition-opacity duration-500 ${homeScreenFading ? 'opacity-0' : 'opacity-100'}`}>
           {/* Simple Sun Gradient Background */}
           <div className="absolute inset-0 bg-white overflow-hidden">
-            {/* Main Sun - Pulsing */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-orange-400/50 via-orange-300/30 to-transparent rounded-full blur-[80px] animate-[sunPulse_4s_ease-in-out_infinite]" />
+            {/* Main Gradient - Pulsing (match logo: indigo → fuchsia) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-indigo-400/50 via-fuchsia-400/30 to-transparent rounded-full blur-[80px] animate-[sunPulse_4s_ease-in-out_infinite]" />
             
-            {/* Inner Sun Core - Brighter */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-radial from-yellow-300/40 via-orange-400/30 to-transparent rounded-full blur-[40px] animate-[sunPulse_4s_ease-in-out_infinite_0.5s]" />
+            {/* Inner Core */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-radial from-fuchsia-300/40 via-indigo-400/30 to-transparent rounded-full blur-[40px] animate-[sunPulse_4s_ease-in-out_infinite_0.5s]" />
             
             {/* Outer Glow - Subtle */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-gradient-radial from-orange-200/20 to-transparent rounded-full blur-[120px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-gradient-radial from-indigo-200/20 to-transparent rounded-full blur-[120px]" />
             
             {/* Giant Glowing Orb - Center Bottom */}
             <div className="absolute bottom-0 left-1/2 w-[800px] h-[800px] animate-[orbShrink_3s_ease-out_forwards]" style={{ transform: 'translateX(-50%) translateY(45%)' }}>
               <div className="relative w-full h-full">
-                <div className="absolute inset-0 bg-orange-600 rounded-full blur-[100px] opacity-30 animate-pulse"></div>
-                <div className="absolute inset-16 bg-orange-500 rounded-full blur-[80px] opacity-40 animate-pulse" style={{ animationDelay: '0.3s' }}></div>
-                <div className="absolute inset-32 bg-orange-400 rounded-full blur-[60px] opacity-50 animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-                <div className="absolute inset-48 bg-yellow-300 rounded-full blur-[40px] opacity-60"></div>
+                <div className="absolute inset-0 bg-indigo-600 rounded-full blur-[100px] opacity-30 animate-pulse"></div>
+                <div className="absolute inset-16 bg-fuchsia-500 rounded-full blur-[80px] opacity-40 animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+                <div className="absolute inset-32 bg-indigo-400 rounded-full blur-[60px] opacity-50 animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                <div className="absolute inset-48 bg-fuchsia-300 rounded-full blur-[40px] opacity-60"></div>
               </div>
             </div>
           </div>
@@ -2829,7 +2829,7 @@ Focus on the key sections and content, making it clean and modern.`;
                     }}
                     placeholder=" "
                     aria-placeholder="https://example.com"
-                    className="h-[3.25rem] w-full resize-none focus-visible:outline-none focus-visible:ring-orange-500 focus-visible:ring-2 rounded-[18px] text-sm text-[#36322F] px-4 pr-12 border-[.75px] border-border bg-white"
+                    className="h-[3.25rem] w-full resize-none focus-visible:outline-none focus-visible:ring-indigo-500 focus-visible:ring-2 rounded-[18px] text-sm text-[#36322F] px-4 pr-12 border-[.75px] border-border bg-white"
                     style={{
                       boxShadow: '0 0 0 1px #e3e1de66, 0 1px 2px #5f4a2e14, 0 4px 6px #5f4a2e0a, 0 40px 40px -24px #684b2514',
                       filter: 'drop-shadow(rgba(249, 224, 184, 0.3) -0.731317px -0.731317px 35.6517px)'
@@ -2909,8 +2909,8 @@ Focus on the key sections and content, making it clean and modern.`;
                             }}
                             className={`p-3 rounded-lg border transition-all ${
                               selectedStyle === style.name
-                                ? 'border-orange-400 bg-orange-50 text-gray-900 shadow-sm'
-                                : 'border-gray-200 bg-white hover:border-orange-200 hover:bg-orange-50/50 text-gray-700'
+                                ? 'border-indigo-400 bg-indigo-50 text-gray-900 shadow-sm'
+                                : 'border-gray-200 bg-white hover:border-indigo-200 hover:bg-indigo-50/50 text-gray-700'
                             }`}
                           >
                             <div className="text-sm font-medium">{style.name}</div>
@@ -3285,7 +3285,7 @@ Focus on the key sections and content, making it clean and modern.`;
                           return startIndex !== -1 ? lastContent.slice(startIndex) : lastContent;
                         })()}
                       </SyntaxHighlighter>
-                      <span className="inline-block w-2 h-3 bg-orange-400 ml-3 mb-3 animate-pulse" />
+                      <span className="inline-block w-2 h-3 bg-fuchsia-400 ml-3 mb-3 animate-pulse" />
                     </div>
                   </motion.div>
                 )}

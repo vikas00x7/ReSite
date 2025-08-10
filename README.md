@@ -74,3 +74,7 @@ Optional: OpenAI‑compatible local servers (e.g., LM Studio)
 ## License
 
 MIT
+
+---
+
+Logo file: `public/resite-logo.svg`

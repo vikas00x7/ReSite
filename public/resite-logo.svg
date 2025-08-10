@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ReSite logo">
+  <defs>
+    <linearGradient id="g" x1="32" y1="224" x2="224" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5B8CFF"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background container -->
+  <rect x="16" y="16" width="224" height="224" rx="28" fill="url(#g)"/>
+  <!-- Subtle inner stroke -->
+  <rect x="16.75" y="16.75" width="222.5" height="222.5" rx="27.25" fill="none" stroke="white" opacity="0.12"/>
+
+  <!-- Window motif -->
+  <g opacity="0.9">
+    <rect x="48" y="64" width="160" height="112" rx="14" fill="white" opacity="0.08"/>
+    <rect x="48" y="64" width="160" height="24" rx="10" fill="white" opacity="0.12"/>
+    <circle cx="64" cy="76" r="4" fill="white" opacity="0.5"/>
+    <circle cx="78" cy="76" r="4" fill="white" opacity="0.5"/>
+    <circle cx="92" cy="76" r="4" fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- "Re" arrow: transform / refresh into new site -->
+  <path d="M176 156c-16 18-40 28-64 24-29-4-53-28-57-57-3-24 6-48 24-64" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M94 44h30c6 0 10 4 10 10v30" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M94 44l-16 16" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+
+  <!-- Code chevrons: <> to emphasize site/code -->
+  <path d="M102 132l-20 20 20 20" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M154 172l20-20-20-20" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>
+
+

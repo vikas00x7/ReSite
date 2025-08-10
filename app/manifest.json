@@ -1,0 +1,15 @@
+{
+  "name": "ReSite",
+  "short_name": "ReSite",
+  "icons": [
+    {
+      "src": "/app/icon.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#6C84FF",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
+

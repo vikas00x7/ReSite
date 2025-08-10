@@ -17,7 +17,6 @@
     "@ai-sdk/anthropic": "^2.0.1",
     "@ai-sdk/groq": "^2.0.0",
     "@ai-sdk/openai": "^2.0.4",
-    "@ai-sdk/openai-compatible": "^2.0.1",
     "@anthropic-ai/sdk": "^0.57.0",
     "@e2b/code-interpreter": "^1.5.1",
     "@radix-ui/react-slot": "^1.2.3",
@@ -54,5 +53,8 @@
     "eslint-config-next": "15.4.3",
     "tailwindcss": "^4.1.11",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.1.11"
   }
 }

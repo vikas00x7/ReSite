@@ -1027,9 +1027,9 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                                 <FiChevronRight className="w-4 h-4 text-gray-600" />
                               )}
                               {expandedFolders.has(dir) ? (
-                                <BsFolder2Open className="w-4 h-4 text-yellow-600" />
+                               <BsFolder2Open className="w-4 h-4 text-indigo-600" />
                               ) : (
-                                <BsFolderFill className="w-4 h-4 text-yellow-600" />
+                               <BsFolderFill className="w-4 h-4 text-indigo-600" />
                               )}
                               <span className="text-gray-700">{dir.split('/').pop()}</span>
                             </div>
@@ -1205,7 +1205,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                             <span className="font-mono text-sm">{generationProgress.currentFile.path}</span>
                             <span className={`px-2 py-0.5 text-xs rounded ${
                               generationProgress.currentFile.type === 'css' ? 'bg-blue-600 text-white' :
-                              generationProgress.currentFile.type === 'javascript' ? 'bg-yellow-600 text-white' :
+                              generationProgress.currentFile.type === 'javascript' ? 'bg-indigo-600 text-white' :
                               generationProgress.currentFile.type === 'json' ? 'bg-green-600 text-white' :
                               'bg-gray-200 text-gray-700'
                             }`}>
@@ -1232,7 +1232,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                           >
                             {generationProgress.currentFile.content}
                           </SyntaxHighlighter>
-                          <span className="inline-block w-2 h-3 bg-orange-400 ml-4 mb-4 animate-pulse" />
+                         <span className="inline-block w-2 h-3 bg-fuchsia-400 ml-4 mb-4 animate-pulse" />
                         </div>
                       </div>
                     )}
@@ -1247,7 +1247,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                           </div>
                           <span className={`px-2 py-0.5 text-xs rounded ${
                             file.type === 'css' ? 'bg-blue-600 text-white' :
-                            file.type === 'javascript' ? 'bg-yellow-600 text-white' :
+                           file.type === 'javascript' ? 'bg-indigo-600 text-white' :
                             file.type === 'json' ? 'bg-green-600 text-white' :
                             'bg-gray-200 text-gray-700'
                           }`}>
@@ -1956,7 +1956,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
     const ext = fileName.split('.').pop()?.toLowerCase();
     
     if (ext === 'jsx' || ext === 'js') {
-      return <SiJavascript className="w-4 h-4 text-yellow-500" />;
+     return <SiJavascript className="w-4 h-4 text-indigo-500" />;
     } else if (ext === 'tsx' || ext === 'ts') {
       return <SiReact className="w-4 h-4 text-blue-500" />;
     } else if (ext === 'css') {
@@ -2947,7 +2947,7 @@ Focus on the key sections and content, making it clean and modern.`;
                             }
                           }}
                           placeholder="Add more details: specific features, color preferences..."
-                          className="w-full px-4 py-2 text-sm bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-orange-300 focus:ring-2 focus:ring-orange-100 transition-all duration-200"
+                         className="w-full px-4 py-2 text-sm bg-white border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100 transition-all duration-200"
                         />
                       </div>
                     </div>
@@ -3171,7 +3171,7 @@ Focus on the key sections and content, making it clean and modern.`;
                             >
                               <span className={`inline-block w-1.5 h-1.5 rounded-full ${
                                 fileType === 'css' ? 'bg-blue-400' :
-                                fileType === 'javascript' ? 'bg-yellow-400' :
+                               fileType === 'javascript' ? 'bg-indigo-400' :
                                 fileType === 'json' ? 'bg-green-400' :
                                 'bg-gray-400'
                               }`} />
@@ -3196,7 +3196,7 @@ Focus on the key sections and content, making it clean and modern.`;
                           >
                             <span className={`inline-block w-1.5 h-1.5 rounded-full ${
                               file.type === 'css' ? 'bg-blue-400' :
-                              file.type === 'javascript' ? 'bg-yellow-400' :
+                             file.type === 'javascript' ? 'bg-indigo-400' :
                               file.type === 'json' ? 'bg-green-400' :
                               'bg-gray-400'
                             }`} />

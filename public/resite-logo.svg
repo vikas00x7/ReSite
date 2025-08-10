@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ReSite logo">
+<svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ReSite logo">
   <defs>
-    <linearGradient id="g" x1="32" y1="224" x2="224" y2="32" gradientUnits="userSpaceOnUse">
+    <linearGradient id="g" x1="0" y1="160" x2="600" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5B8CFF"/>
       <stop offset="1" stop-color="#A855F7"/>
     </linearGradient>
   </defs>
-  <!-- Background container -->
-  <rect x="16" y="16" width="224" height="224" rx="28" fill="url(#g)"/>
-  <!-- Subtle inner stroke -->
-  <rect x="16.75" y="16.75" width="222.5" height="222.5" rx="27.25" fill="none" stroke="white" opacity="0.12"/>
 
-  <!-- Window motif -->
-  <g opacity="0.9">
-    <rect x="48" y="64" width="160" height="112" rx="14" fill="white" opacity="0.08"/>
-    <rect x="48" y="64" width="160" height="24" rx="10" fill="white" opacity="0.12"/>
-    <circle cx="64" cy="76" r="4" fill="white" opacity="0.5"/>
-    <circle cx="78" cy="76" r="4" fill="white" opacity="0.5"/>
-    <circle cx="92" cy="76" r="4" fill="white" opacity="0.5"/>
+  <!-- Minimal techy logomark -->
+  <g transform="translate(16,16)">
+    <!-- rounded square outline -->
+    <rect x="0" y="0" width="96" height="96" rx="16" fill="none" stroke="url(#g)" stroke-width="4"/>
+    <!-- angle brackets <> -->
+    <path d="M36 34 L22 48 L36 62" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 34 L74 48 L60 62" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- small dot for cursor/pixel vibe -->
+    <circle cx="48" cy="76" r="3" fill="url(#g)"/>
   </g>
 
-  <!-- "Re" arrow: transform / refresh into new site -->
-  <path d="M176 156c-16 18-40 28-64 24-29-4-53-28-57-57-3-24 6-48 24-64" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
-  <path d="M94 44h30c6 0 10 4 10 10v30" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
-  <path d="M94 44l-16 16" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <!-- Wordmark -->
+  <g font-family="Inter, Segoe UI, Roboto, system-ui, -apple-system, sans-serif" font-size="64" dominant-baseline="middle">
+    <text x="140" y="64" font-weight="800" fill="url(#g)">Re</text>
+    <text x="248" y="64" font-weight="700" fill="#0F172A">Site</text>
+  </g>
 
-  <!-- Code chevrons: <> to emphasize site/code -->
-  <path d="M102 132l-20 20 20 20" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-  <path d="M154 172l20-20-20-20" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <!-- Small tagline (optional, subtle). Commented out to keep minimal. -->
+  <!-- <text x="140" y="110" font-family="Inter, Segoe UI, Roboto, system-ui, -apple-system, sans-serif" font-size="16" fill="#475569">build with AI</text> -->
 </svg>
-
-

@@ -18,10 +18,11 @@
     <circle cx="48" cy="76" r="3" fill="url(#g)"/>
   </g>
 
-  <!-- Wordmark -->
+  <!-- Wordmark (no space between Re and Site) -->
   <g font-family="Inter, Segoe UI, Roboto, system-ui, -apple-system, sans-serif" font-size="64" dominant-baseline="middle">
-    <text x="140" y="64" font-weight="800" fill="url(#g)">Re</text>
-    <text x="248" y="64" font-weight="700" fill="#0F172A">Site</text>
+    <text x="140" y="64">
+      <tspan font-weight="800" fill="url(#g)">Re</tspan><tspan font-weight="700" fill="#0F172A">Site</tspan>
+    </text>
   </g>
 
   <!-- Small tagline (optional, subtle). Commented out to keep minimal. -->

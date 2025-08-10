@@ -1111,7 +1111,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                 {selectedFile ? (
                   <div className="animate-in fade-in slide-in-from-top-2 duration-300">
                     <div className="bg-black border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                      <div className="px-4 py-2 bg-[#36322F] text-white flex items-center justify-between">
+                      <div className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           {getFileIcon(selectedFile)}
                           <span className="font-mono text-sm">{selectedFile}</span>
@@ -1170,7 +1170,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     </div>
                   ) : (
                     <div className="bg-black border border-gray-200 rounded-lg overflow-hidden">
-                      <div className="px-4 py-2 bg-gray-100 text-gray-900 flex items-center justify-between">
+                       <div className="px-4 py-2 bg-gradient-to-r from-indigo-50 to-fuchsia-50 text-gray-900 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <div className="w-3 h-3 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
                           <span className="font-mono text-sm">Streaming code...</span>
@@ -1199,7 +1199,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     {/* Show current file being generated */}
                     {generationProgress.currentFile && (
                       <div className="bg-black border-2 border-gray-400 rounded-lg overflow-hidden shadow-sm">
-                        <div className="px-4 py-2 bg-[#36322F] text-white flex items-center justify-between">
+                        <div className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
                             <span className="font-mono text-sm">{generationProgress.currentFile.path}</span>
@@ -1240,7 +1240,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     {/* Show completed files */}
                     {generationProgress.files.map((file, idx) => (
                       <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                        <div className="px-4 py-2 bg-[#36322F] text-white flex items-center justify-between">
+                        <div className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <span className="text-green-500">✓</span>
                             <span className="font-mono text-sm">{file.path}</span>
@@ -1281,7 +1281,7 @@ Tip: I automatically detect and install npm packages from your code imports (lik
                     {/* Show remaining raw stream if there's content after the last file */}
                     {!generationProgress.currentFile && generationProgress.streamedCode.length > 0 && (
                       <div className="bg-black border border-gray-200 rounded-lg overflow-hidden">
-                        <div className="px-4 py-2 bg-[#36322F] text-white flex items-center justify-between">
+                        <div className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="w-3 h-3 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
                             <span className="font-mono text-sm">Processing...</span>
@@ -2781,7 +2781,7 @@ Focus on the key sections and content, making it clean and modern.`;
               href="https://github.com/vikas00x7/ReSite.git" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#36322F] text-white px-3 py-2 rounded-[10px] text-sm font-medium [box-shadow:inset_0px_-2px_0px_0px_#171310,_0px_1px_6px_0px_rgba(58,_33,_8,_58%)] hover:translate-y-[1px] hover:scale-[0.98] hover:[box-shadow:inset_0px_-1px_0px_0px_#171310,_0px_1px_3px_0px_rgba(58,_33,_8,_40%)] active:translate-y-[2px] active:scale-[0.97] active:[box-shadow:inset_0px_1px_1px_0px_#171310,_0px_1px_2px_0px_rgba(58,_33,_8,_30%)] transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white px-3 py-2 rounded-[10px] text-sm font-medium shadow-sm hover:brightness-110 hover:translate-y-[1px] hover:scale-[0.98] active:translate-y-[2px] active:scale-[0.97] transition-all duration-200"
             >
               <FiGithub className="w-4 h-4" />
               <span>Use this template</span>
@@ -3310,7 +3310,7 @@ Focus on the key sections and content, making it clean and modern.`;
               />
               <button
                 onClick={sendChatMessage}
-                className="absolute right-2 bottom-2 p-2 bg-[#36322F] text-white rounded-[10px] hover:bg-[#4a4542] [box-shadow:inset_0px_-2px_0px_0px_#171310,_0px_1px_6px_0px_rgba(58,_33,_8,_58%)] hover:translate-y-[1px] hover:scale-[0.98] hover:[box-shadow:inset_0px_-1px_0px_0px_#171310,_0px_1px_3px_0px_rgba(58,_33,_8,_40%)] active:translate-y-[2px] active:scale-[0.97] active:[box-shadow:inset_0px_1px_1px_0px_#171310,_0px_1px_2px_0px_rgba(58,_33,_8,_30%)] transition-all duration-200"
+                className="absolute right-2 bottom-2 p-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white rounded-[10px] shadow-sm hover:brightness-110 hover:translate-y-[1px] hover:scale-[0.98] active:translate-y-[2px] active:scale-[0.97] transition-all duration-200"
                 title="Send message (Enter)"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -3325,7 +3325,7 @@ Focus on the key sections and content, making it clean and modern.`;
         <div className="flex-1 flex flex-col overflow-hidden">
           <div className="px-4 py-2 bg-card border-b border-border flex justify-between items-center">
             <div className="flex items-center gap-4">
-              <div className="flex bg-[#36322F] rounded-lg p-1">
+              <div className="flex bg-gradient-to-r from-indigo-600 to-fuchsia-600 rounded-lg p-1">
                 <button
                   onClick={() => setActiveTab('generation')}
                   className={`p-2 rounded-md transition-all ${
@@ -3364,7 +3364,7 @@ Focus on the key sections and content, making it clean and modern.`;
                       {generationProgress.files.length} files generated
                     </div>
                   )}
-                  <div className={`inline-flex items-center justify-center whitespace-nowrap rounded-[10px] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#36322F] text-white hover:bg-[#36322F] [box-shadow:inset_0px_-2px_0px_0px_#171310,_0px_1px_6px_0px_rgba(58,_33,_8,_58%)] hover:translate-y-[1px] hover:scale-[0.98] hover:[box-shadow:inset_0px_-1px_0px_0px_#171310,_0px_1px_3px_0px_rgba(58,_33,_8,_40%)] active:translate-y-[2px] active:scale-[0.97] active:[box-shadow:inset_0px_1px_1px_0px_#171310,_0px_1px_2px_0px_rgba(58,_33,_8,_30%)] disabled:shadow-none disabled:hover:translate-y-0 disabled:hover:scale-100 h-8 px-3 py-1 text-sm gap-2`}>
+                  <div className={`inline-flex items-center justify-center whitespace-nowrap rounded-[10px] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white hover:brightness-110 h-8 px-3 py-1 text-sm gap-2`}>
                     {generationProgress.isGenerating ? (
                       <>
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />

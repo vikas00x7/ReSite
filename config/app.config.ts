@@ -33,23 +33,33 @@ export const appConfig = {
     // Available models
     availableModels: [
       'openai/gpt-5',
+      'openai/gpt-4o',
+      'openai/gpt-4o-mini',
+      'openai/o3',
       'openai/gpt-oss-20b',
       'moonshotai/kimi-k2-instruct',
       'ollama/deepseek-coder:6.7b',
       'ollama/gpt-oss:20b',
       'ollama/qwen2.5-coder:7b',
-      'anthropic/claude-sonnet-4-20250514'
+      'anthropic/claude-sonnet-4-20250514',
+      'anthropic/claude-3.5-sonnet',
+      'anthropic/claude-3.7-sonnet-thinking'
     ],
     
     // Model display names
     modelDisplayNames: {
       'openai/gpt-5': 'GPT-5',
+      'openai/gpt-4o': 'GPT-4o',
+      'openai/gpt-4o-mini': 'GPT-4o mini',
+      'openai/o3': 'O3',
       'openai/gpt-oss-20b': 'GPT‑OSS 20B (Groq)',
       'moonshotai/kimi-k2-instruct': 'Kimi K2 Instruct',
       'ollama/deepseek-coder:6.7b': 'DeepSeek Coder 6.7B (Ollama)',
       'ollama/gpt-oss:20b': 'GPT‑OSS 20B (Ollama)',
       'ollama/qwen2.5-coder:7b': 'Qwen2.5 Coder 7B (Ollama)',
-      'anthropic/claude-sonnet-4-20250514': 'Sonnet 4'
+      'anthropic/claude-sonnet-4-20250514': 'Sonnet 4',
+      'anthropic/claude-3.5-sonnet': 'Claude 3.5 Sonnet',
+      'anthropic/claude-3.7-sonnet-thinking': 'Claude 3.7 Sonnet (Thinking)'
     },
     
     // Temperature settings for non-reasoning models

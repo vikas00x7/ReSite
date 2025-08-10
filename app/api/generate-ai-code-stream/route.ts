@@ -1154,19 +1154,21 @@ CRITICAL: When files are provided in the context:
         
         // Determine which provider to use based on model
         const isAnthropic = model.startsWith('anthropic/');
-        const isOpenAI = model.startsWith('openai/gpt-5');
+        const isOpenAIPrefix = model.startsWith('openai/');
         const isOllama = model.startsWith('ollama/');
+        // Treat OpenAI "gpt-oss" models as GROQ-backed open-weight models
+        const isOpenAIProvider = isOpenAIPrefix && !model.includes('gpt-oss');
         const modelProvider = isAnthropic
           ? anthropic
-          : isOpenAI
+          : isOpenAIProvider
           ? openai
           : isOllama
           ? (m: string) => ollama(m.replace('ollama/', ''))
           : groq;
         const actualModel = isAnthropic
           ? model.replace('anthropic/', '')
-          : isOpenAI
-          ? (model === 'openai/gpt-5' ? 'gpt-5' : model)
+          : isOpenAIProvider
+          ? model.replace('openai/', '')
           : isOllama
           ? model.replace('ollama/', '')
           : model;
@@ -1241,13 +1243,14 @@ If you're running out of space, generate FEWER files but make them COMPLETE.
           stopSequences: []
         };
         
-        // Add temperature for non-reasoning models
-        if (!model.startsWith('openai/gpt-5')) {
+        // Add temperature for non-reasoning models (leave off for OpenAI reasoning models like gpt-5/o3)
+        const isOpenAIReasoning = isOpenAIProvider && (/^gpt-5(\b|$)/.test(actualModel) || /^o3(\b|$)/.test(actualModel));
+        if (!isOpenAIReasoning) {
           streamOptions.temperature = 0.7;
         }
         
-        // Add reasoning effort for GPT-5 models
-        if (isOpenAI) {
+        // Add reasoning effort for OpenAI reasoning models
+        if (isOpenAIReasoning) {
           streamOptions.experimental_providerMetadata = {
             openai: {
               reasoningEffort: 'high'

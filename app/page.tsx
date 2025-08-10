@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import { Select } from '@/components/ui/select';
+import CustomSelect from '@/components/ui/custom-select';
 import { appConfig } from '@/config/app.config';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -2997,26 +2999,26 @@ Focus on the key sections and content, making it clean and modern.`;
         </div>
         <div className="flex items-center gap-2">
           {/* Model Selector - Left side */}
-          <select
-            value={aiModel}
-            onChange={(e) => {
-              const newModel = e.target.value;
-              setAiModel(newModel);
-              const params = new URLSearchParams(searchParams);
-              params.set('model', newModel);
-              if (sandboxData?.sandboxId) {
-                params.set('sandbox', sandboxData.sandboxId);
-              }
-              router.push(`/?${params.toString()}`);
-            }}
-            className="px-3 py-1.5 text-sm bg-white border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#36322F] focus:border-transparent"
-          >
-            {appConfig.ai.availableModels.map(model => (
-              <option key={model} value={model}>
-                {appConfig.ai.modelDisplayNames[model] || model}
-              </option>
-            ))}
-          </select>
+          <div className="relative min-w-[260px]">
+            <CustomSelect
+              ariaLabel="AI model"
+              value={aiModel}
+              onChange={(newModel) => {
+                setAiModel(newModel);
+                const params = new URLSearchParams(searchParams);
+                params.set('model', newModel);
+                if (sandboxData?.sandboxId) {
+                  params.set('sandbox', sandboxData.sandboxId);
+                }
+                router.push(`/?${params.toString()}`);
+              }}
+              options={appConfig.ai.availableModels.map((model) => ({
+                value: model,
+                label: appConfig.ai.modelDisplayNames[model] || model,
+              }))}
+              className="w-full"
+            />
+          </div>
           <Button 
             variant="code"
             onClick={() => createSandbox()}
